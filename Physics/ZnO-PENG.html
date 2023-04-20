@@ -2,15 +2,70 @@
 <html>
   <head>
     <title>ZnO PENGs : Energy From Noise</title>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <style>
 
-      #pdf-container {
-        width: 100%;
-        height: 800px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      @media (max-width: 768px) {
+      .MathJax_SVG_Display {
+          font-size: 1em !important;
+          max-width: 100% !important;
+        }
       }
+
+
+h1 {
+  padding : 50px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+h2 {
+  text-align: left;
+  margin-left: 30px;
+
+}
+
+h3 {
+  font-family: Courier New;
+  text-align: center;
+  font-weight: normal;
+}
+
+p  {
+  margin-left : 20px;
+  text-align: justify;
+}
+
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+  padding : 5px;
+  text-align: center;
+/*  font-size : 120%;*/
+/*  font-family: Garamond;*/
+  margin : auto;
+}
+
+
+caption,figcaption{
+  caption-side: bottom;
+  font-style : italic;
+}
+
+
+.content{
+  max-width : 800px;
+  margin : auto;
+  font-family : Garamond;
+  font-size : 120%;
+}
+
+.sub {
+  font-weight: normal;
+}
 
       nav ul {
         list-style: none;
@@ -52,6 +107,15 @@
       }
       nav ul li:hover > ul {
         display: block;
+
+      .row {
+        display : flex;
+        justify-content: center;
+      }
+      .column {
+        display : flex;
+        width : 50%;
+      }
     </style>
 
   </head>
@@ -65,10 +129,146 @@
       </ul>
     </nav>
 
-  <body>
-    <div id="pdf-container">
-      <embed src="ZnO_files/Dissertation.pdf" type="application/pdf" width="60%" height="100%">
-    </div>
-  </body>
+<div class = "content">
+  <h1>Synthesis and Characterization of ZnO Nanowires for 
+Piezoelectric Sensor Applications</h1>
+<h3>Rishab Navaneet</h3>
+<h3>under the guidance of Dr. Suvra Prakash Mondal</h3>
+<h3>December 2022</h3>
+
+<h2>Introduction</h2>
+<p>
+  There is a high amount of easily accessible energy in vibrations and natural mechanical motions including waves, winds, body movements, noises (mechanical and acoustic vibrations) etc. Harvesting this type of energy offers a great potential for remote/wireless sensing, charging batteries, and powering electronic devices.
+  Amoung possible methods to harvest this energy, piezoelectric transducers are distinguished by their high output power, scalability to small sizes and easiness to manufacture. 
+</p>
+<p>
+  Recent development of nanogenerators, based on ZnO nanowires, has demonstrated promising results in the harvest of small-scale mechanical energy from surroundings. Its compact design and high voltage outputs promise higher energy densities, higher efficiency, lower cost and longer lifespan. Integration of such energy harvesting devices into fabrics and sensors could lead to self-powered electronic systems, compact biomedical sensors, implants and other promising technical advancements.
+</p>
+<p>  
+  This project is a continuation of last year’s Minor Project, where we studied the piezoelectric and flexo-electric effects in ZnO nanowires, the factors affecting output power, and the feasibility of various growth techniques. After studying three growth techniques, comparing growth densities, X-ray diffraction data, and the required experimental conditions, it was found that the Hydrothermal growth process produced predominantly c-axis oriented NWs with controllable densities, low temperature requirements and low cost of production. Factors that negatively affect the output voltage were identified, of which the presence of free electrons was the major limitation. Others include overlap of adjacent NWs, Voltage drop across the Schottky contact, Lack of proper c-axis orientation, etc. Hydrothermal method also provided an option to dope p-type impurities into the crystal, eliminating free electrons and thereby improving piezoelectric output. <br><br>
+
+  Through this project we aim to : 
+</p>
+<p style  = "font-style: italic;"> 
+  Grow ZnO nanowires on flexible and rigid substrates, study its piezoelectric properties, and integrate the NGs into sensor or self-powered device.
+</p>
+<p>
+  We start by growing good quality ZnO Nanowires on flexible and rigid substrates and studying the piezoelectric effect. With improvised growth techniques and doping levels, we aim to achieve high voltage and power output strong enough to power small electronic devices. Gas sensing properties of NGs shall also be explored along with future scopes of integrating flexible nanogenerators into biomedical sensors, self-powering fabrics, energy harvesters and much more.
+</p>
+
+<h2>Thesis Works</h2>
+
+<h2 class = "sub">Growing NWs</h2>
+<p>
+  ZnO nanowires were grown on Flexible ITO coated PET and FTO coated Glass substrates. A seeded hydrothermal approach was taken with a precursor concentration of 50mM and a growth temperature of \(90^oC\). 
+<p>
+  Firstly, the surface was sonicated in \(HCl\) for 20 minutes, washed in Deionized water, and then sonicated in Acetone for 5 minutes. A ZnO seed solution was prepared by mixing \(0.05M\) Zinc Acetate in \(5mL\) Isopropyl Alcohol, heating the mixture at \(65^oC\) until the solution becomes transparent, and then adding \(200\mu L\) of diethylamine. Six layers of seed solution were spin coated, and the substrate was annealed for 1hr at \(300^oC\) for FTO Glass and \(100^oC\) for ITO-PET substrate.
+</p>
+<figure>
+<div class = "row">
+      <div class = "column" id="fig1">
+
+            <img src = "ZnO_files/pic1.jpg" style = "height : 300px; padding : 0.4%">
+            <img src = "ZnO_files/pic2.jpg" style = "height : 300px; padding : 0.4%">
+      </div>
+</div>
+<figcaption>Figure 1 : (a) : Schematic sketch of Hydrothermal growth process [5]. (b) : Hydrothermally grown ZnO NWs over FTO coated glass.</figcaption>
+</figure>
+
+<p>
+An equimolar aqueous solution of \(0.05M\) Hexamine (HMTA) and \(0.05M\) Zinc Nitrate Hexahydrate (ZNH) was prepared. The Annealed substrates were placed in this precursor solution – seeded surface facing down – and kept at \(90^oC\) for 4 hours. The substrate was then rinsed in DI water and annealed at \(80^oC\) for 1 hour to complete the growth process.
+</p>
+
+<h2 class = "sub">Electrode Placement</h2>
+
+<p>
+  To measure the output characteristics, proper electric contacts had to be taken from the top and bottom surfaces of the NW layer. Since ZnO is an n-type semiconductor, the metal should also be chosen properly considering the type of metal-semiconductor junction that would form. An Ideal contact electrode would form an Ohmic junction and provide all the generated piezoelectric voltage at the output. 
+</p>
+<p>
+  However, the polarity of the voltage generated when a NW is compressed depends on the polarity the NW (whether its a \(Zn\) atom on top or \(O\) atom on top). The spin-coated seed layer - and hence the NWs - may not have uniform polarity. Thus, it is necessary to rectify the output. Hence, a schottky junction is preferrable.
+</p>
+
+<table id = "tab1">
+  <tr><th>Metal</th> <th>Work Function \((eV)\)</th></tr>
+  <tr><td>\(Ag\)</td><td>\(4.26 - 4.74\)</td></tr>
+  <tr><td>\(Al\)</td><td>\(4.06 - 4.26\)</td></tr>
+  <tr><td>\(Cu\)</td><td>\(4.53 - 5.10\)</td></tr>
+  <tr><td>Carbon Tape</td><td>\(\sim 5\)</td></tr>
+
+<caption>Table 1 : Work Function of available electrodes</caption>
+</table>
+
+<p>
+  The electrodes available and their corresponding work functions are given in <a href = #tab1>Table 1</a>. The work function of an annealed ZnO surface was analysed by Kim, et. al in 2010 [3] and Guttman, et. al in 2012 [2] to be \(4.1 \ eV\). For an ohmic junction, the work function of the metal should match that of ZnO. Thus, an Aluminium electrode would be the best choice, followed by Silver and then Copper; but Cu is preferrable for a rectified output.
+</p>
+
+<p>  
+  Due to time constraints and device failures, depositing Al/Ag top electrode through thermal evaporation could not be done. Instead, Ag paste top electrode was tested along with conducting Carbon and Copper tape. Due to diffusion of silver paste into the NW array, Ag electrode did not give good results. Carbon tape was also discarded because of its high resistance.
+</p>
+
+<figure style = "margin : auto;">
+  <img src="ZnO_files/pic3.png" style = "height : 380px; padding : 0.4% "></figure>
+<figcaption>Figure 2 : (a,b) : Schematic representation of electrodes (c,d) : Experimental samples</figcaption>
+
+
+
+<p>
+  For attaching the electrodes, one edge of the FTO coated glass was cleaned with acetone, exposing the conductive FTO layer, and a thin copper wire was attached to the surface using conductive Copper tape (contact <b>A</b>). For the top electrode, a Cu tape was placed above the NW layer, without exposing the adhesive layer. The top electrode was then held in place by wrapping in Cellophane tape.
+</p>
+
+<h2 class = "sub">Electrical Characteristics</h2>
+
+<p>
+  The I-V characteristic of the Nanogenerator was analysed along with its response to mechanical compressions and Light.
+</p>
+<p>
+  The I-V plots in the presence and absence of light are given in <a href = #fig3>Figure 3</a>. The plots show the existence of a Schottky diode at the metal-semiconductor junction with a barrier potential of \(\sim 0.8 V\), which matches the difference in work function of ZnO and Cu. At higher voltages, the sample show ohmic behaviour with a resistance of \(1.5k\Ohm\).
+</p>
+
+<figure style = "margin : auto;">
+  <img src="ZnO_files/pic4.png" style = "height : 380px; padding : 0.4% " id = "fig3"></figure>
+<figcaption>Figure 3 : V-I characteristics. (a) : log-log plot in presence and absence of light, with knee voltage marked. (b) and (c) : Individual V-I plots </figcaption>
+
+<p>
+  The Nanogenerator also showed photovoltaic properties with a peak short-circuit current \(I_{sc} \sim 0.5 \mu A\). <a href = #fig4>Figure 4(a)</a> shows the current output when the NG was exposed to white light of intensity \(100mW/cm^2\) in \(20s\)  intervals. The output current peaks initially, then decays to a saturation. The plot was analysed to obtain the saturation current \(I_{sc,sat}\) and characteristic saturation time (Figure 4). On continuous exposure, the short circuit current saturated at \(0.13\mu A\), with a characteristic time of \(5.57 s\). 
+</p>
+
+<figure style = "margin : auto;">
+  <img src="ZnO_files/pic5.png" style = "height : 380px; padding : 0.4% " id = "fig4"></figure>
+<figcaption>Figure 4 : response to light. (a) : short circuit current when exposed to 100mW/cm2 white light in 20s intervals. (b) : Saturation under continuous exposure. </figcaption>
+
+<h2 class = "sub">Response to Mechanical Compressions</h2>
+
+<p>
+  The NG was tapped manually (Figure 5 e) and the generated Voltage and Current were plotted. With the input resistance of the measurement device acting as a load, we obtain a peak output voltage of \(\approx 3mV\), and an average peak output current of \(\appprox 4\mu A\). The power output from the device was \( \sim 15 nW\) peak to peak, and \(\sim 1.8nW\) on average.
+</p>
+
+<figure style = "margin : auto;">
+  <img src="ZnO_files/pic6.png" style = "height : 380px; padding : 0.4% " id = "fig5"></figure>
+<figcaption>Figure 5 : (a,b,c) : Voltage, Current and Power output of the NG under mechanical compressions.(d): V-I characteristics under compression.</figcaption>
+
+<p>
+  When used as a nanogenerator, the V-I characteristics of the device resembles that of a Solar cell (Figure 5 d). The best fit curve gives \(V_{OC}\approx 4mV\), which match the observed data. When the compressive force is removed, the voltage developed across the NG decays exponentially. The relaxation time of the NG was also analysed using Arduino Serial data (Figure 6) to obtain an average relaxation time of \(6.4 ms\).
+</p>
+
+<figure style = "margin : auto;">
+  <img src="ZnO_files/pic7.png" style = "height : 380px; padding : 0.4% " id = "fig6"></figure>
+<figcaption>Figure 6 : Analysis of Voltage data from Arduino Serial monitor. (b) : Exponential best fit for one peak (c) : Average relaxation time obtained from six exponential fit.</figcaption>
+
+<h2 class = "sub">Tapping Mechanism</h2>
+
+<p>
+  To study the efficiency and power generated from the NWs, A prototype device was built using a stepper motor and an Arduino based controlling unit, which produced periodic tapping OR periodic vibration. The device could tap or vibrate the NGs at controllable frequencies, ranging from \(0 - 250 \ Hz\), where the delay between taps and velocity of impact could be controlled. 
+</p>
+<p>
+  The motion of the stepper motor was calibrated using a frequency generator. By setting the motor to vibrate at a set frequency and then playing an audio signal of the same frequency, the beats produced helped in measuring the exact frequency of vibration, with errors \(< 1 \ Hz\).
+</p>
+
+<figure style = "margin : auto;">
+  <img src="ZnO_files/pic8.png" style = "height : 380px; padding : 0.4% " id = "fig7"></figure>
+<figcaption>Figure 7 : Arduino based tapping mechanism for periodic compressions</figcaption>
+
+</div>
+
   </body>
 </html>
